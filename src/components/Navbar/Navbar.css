@@ -1,0 +1,101 @@
+html {
+  font-size: 62.5%;
+}
+
+.navbar {
+  padding: .5rem 2rem;
+  display: flex;
+  justify-content: space-between;
+  position: sticky;
+  top: 0;
+  background-color: #ffff;
+}
+
+.navbar_logo {
+  width: 8%;
+  display: flex;
+  align-items: center;
+  gap: 2rem;
+}
+
+.navbar_logo > .icon {
+  font-size: x-large;
+  flex: 1;
+  padding: .7rem;
+}
+
+.navbar_logo>.icon:hover{
+  background-color: #f2f2f2;
+  border-radius: 5rem;
+
+}
+
+.navbar_logo > a > img {
+  width: 100%;
+}
+
+.navbar_search {
+  display: flex;
+  align-items: center;
+  width: 30%;
+}
+
+.open_iconWithInput {
+  flex: 1;
+  padding: 0.7rem 2rem !important;
+}
+
+.icon_with_input {
+  flex: 1;
+  display: flex;
+  align-items: center;
+  border: 0.5px solid black;
+  padding: 0.3rem 1rem;
+  border-top-left-radius: 2rem;
+  border-bottom-left-radius: 2rem;
+}
+
+.openIcon {
+  display: flex;
+  align-items: center;
+  font-size: large;
+  padding: 0.5rem 1rem;
+}
+
+.closeIcon {
+  display: none;
+  align-items: center;
+  font-size: large;
+  padding: 0.5rem 1rem;
+  padding-left: 0 !important;
+}
+
+.icon_with_input > input {
+  border: none;
+  outline: none;
+  font-size: 1.5rem;
+  border-right: none;
+  background-color: transparent;
+}
+
+.navbar_search > button {
+  display: flex;
+  align-items: center;
+  padding: 0.8rem 1rem;
+  font-size: large;
+  cursor: pointer;
+  border: 0.5px solid black;
+  border-top-right-radius: 2rem;
+  border-bottom-right-radius: 2rem;
+}
+
+.icons {
+  display: flex;
+  align-items: center;
+  gap: 2rem;
+  padding-right: 2rem;
+}
+
+.icon {
+  font-size: x-large;
+}

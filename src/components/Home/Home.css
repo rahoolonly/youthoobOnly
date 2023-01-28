@@ -1,0 +1,18 @@
+.home {
+  float: right;
+  flex: 0.8;
+  padding: 1rem 0;
+  padding-left: 5rem;
+  padding-right: .5rem;
+  display: grid;
+  grid-template-columns: repeat(4, minmax(300px, 1fr)) !important;
+  /* height: 599px; */
+  gap: 2rem;
+}
+
+.homeScreenChange {
+  padding: 1rem 3rem;
+  display: grid;
+  grid-template-columns: repeat(4, minmax(280px, 1fr)) ;
+  gap: 2rem;
+}
