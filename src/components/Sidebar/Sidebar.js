@@ -16,7 +16,6 @@ import "./Sidebar.css";
 
 const Sidebar = ({changeslider}) => {
 
-  console.log(changeslider);
   return (
     <>
       {changeslider && (

@@ -1,0 +1,57 @@
+html {
+  font-size: 62.5%;
+}
+
+.particular-video {
+  width: 55%;
+  text-decoration: none;
+  display: flex;
+  gap: 1rem;
+  flex-direction: column;
+  color: #0f0f0f;
+}
+
+.particular-video-title {
+  font-size: 2rem;
+  color: #0f0f0f;
+  font-weight: 500;
+}
+
+.particular-video-logo-with-text {
+  margin: 1rem 0;
+  display: flex;
+  gap: 1rem;
+  align-items: center;
+}
+
+.particular-video-logo {
+  font-size: xx-large;
+  display: flex;
+  align-items: center;
+}
+
+.particular-video-channelName {
+  display: flex;
+  align-items: center;
+  font-size: 1.4rem;
+  font-weight: 660;
+  color: #262a2d;
+}
+
+.desc-with-views {
+  padding: 1rem 1rem;
+  background-color: #e5e5e5;
+  gap: 0.5rem;
+  display: flex;
+  flex-direction: column;
+  border: 1px solid #e5e5e5;
+  border-radius: 1rem;
+}
+
+.particularVideo-views {
+  font-size: small;
+  font-weight: 750;
+  color: #262a2d;
+  display: flex;
+  gap: 1rem;
+}

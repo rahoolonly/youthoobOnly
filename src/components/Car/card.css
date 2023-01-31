@@ -32,16 +32,15 @@ html {
 }
 
 .main-title {
-  font-size: 1.7rem;
+  font-size: 1.5rem;
   font-weight: 600;
   padding-right: 1rem;
   display: flex;
-  margin-bottom: 0.8rem;
+  margin-bottom: 0.3rem;
 }
 
 .channel-name {
   font-size: small;
-  margin-bottom: 0.1rem;
 }
 .views-with-time {
   font-size: small;
