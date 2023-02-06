@@ -9,7 +9,6 @@ import {
   MdOutlineExpandMore,
 } from "react-icons/md";
 import { AiOutlineLike } from "react-icons/ai";
-import { Link } from "react-router-dom";
 import SideItems from "../SideItems/SideItems";
 import Siderows from "../SideItems/Siderows";
 import "./Sidebar.css";

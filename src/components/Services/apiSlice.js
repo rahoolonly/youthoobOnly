@@ -3,34 +3,30 @@ import { createApi, fetchBaseQuery } from "@reduxjs/toolkit/query/react";
 export const youthoobApi = createApi({
   reducerPath: "Youthoob Api",
   baseQuery: fetchBaseQuery({
-    baseUrl: "https://youtube-v31.p.rapidapi.com/",
+    baseUrl: "https://youtube138.p.rapidapi.com/",
   }),
 
   endpoints: (builder) => ({
     getSuggestedVideos: builder.query({
       query: () => ({
-        url: "search?part=snippet&maxResults=50&q=Punjabisong",
-        method: "GET",
+        url: "search/",
+        params: { q: "Punjabi Song", hl: "en", gl: "US" },
         headers: {
           "X-RapidAPI-Key":
-            "6f4cf2c761msh81ea4b8aeb26428p1938b7jsn7c1393e4927f",
-          "X-RapidAPI-Host": "youtube-v31.p.rapidapi.com",
+            "caf305bc57msh1878be33356a135p1a5e0bjsn3feca92a37bb",
+          "X-RapidAPI-Host": "youtube138.p.rapidapi.com",
         },
       }),
     }),
 
     getVideosBySearch: builder.query({
       query: (keyword) => ({
-        url: `search?part=snippet&q=${keyword}`,
-        method: "GET",
-        params: {
-          regionCode: "IN",
-          maxResults: "70",
-        },
+        url: 'search/',
+        params: { q: `${keyword}`, hl: "en", gl: "US" },
         headers: {
           "X-RapidAPI-Key":
-            "6f4cf2c761msh81ea4b8aeb26428p1938b7jsn7c1393e4927f",
-          "X-RapidAPI-Host": "youtube-v31.p.rapidapi.com",
+            "caf305bc57msh1878be33356a135p1a5e0bjsn3feca92a37bb",
+          "X-RapidAPI-Host": "youtube138.p.rapidapi.com",
         },
       }),
     }),
@@ -38,15 +34,11 @@ export const youthoobApi = createApi({
     getParticularVideoDetails: builder.query({
       query: (id) => ({
         method: "GET",
-        url: "videos",
-        params: {
-          part: "contentDetails,snippet,statistics",
-          id: `${id}`,
-        },
+        url: 'video/details/',
+        params: {id: `${id}`, hl: 'en', gl: 'US'},
         headers: {
-          "X-RapidAPI-Key":
-            "6f4cf2c761msh81ea4b8aeb26428p1938b7jsn7c1393e4927f",
-          "X-RapidAPI-Host": "youtube-v31.p.rapidapi.com",
+          'X-RapidAPI-Key': 'caf305bc57msh1878be33356a135p1a5e0bjsn3feca92a37bb',
+          'X-RapidAPI-Host': 'youtube138.p.rapidapi.com'
         },
       }),
     }),

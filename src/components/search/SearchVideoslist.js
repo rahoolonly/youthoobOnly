@@ -1,5 +1,4 @@
 import React from "react";
-import thumbnail from "../images/IMG_20190731_143717_224.jpg";
 import { Link } from "react-router-dom";
 import "./SearchVideos.css";
 
@@ -16,7 +15,7 @@ const SearchVideoslist = ({ channelLogo, title, thumbnails, channel ,channelID})
             <div className="views-with-time">20M 3 months ago</div>
             <div className="channelName-with-desc">
               <div className="channelName">
-                <div className="channelLogo">{channelLogo}</div>
+                <div className="channelLogo"><img src={channelLogo} alt="" /></div>
                 {channel}
               </div>
               <div className="desc">its a best youtube channel</div>

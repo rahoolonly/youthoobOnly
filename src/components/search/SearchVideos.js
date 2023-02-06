@@ -1,6 +1,5 @@
-import React, { useEffect, useState } from "react";
+import React from "react";
 import SearchVideoslist from "./SearchVideoslist";
-import { RxAvatar } from "react-icons/rx";
 import "./SearchVideos.css";
 import { useGetVideosBySearchQuery } from "../Services/apiSlice";
 import { useParams } from "react-router-dom";
@@ -13,7 +12,7 @@ const SearchVideos = () => {
   //   keyword = keyword.split("%20");
   // }
   const { data, isError, isLoading } = useGetVideosBySearchQuery(keyword);
-   console.log(data);
+  console.log(data?.contents);
   if (isLoading) {
     return <h1>Loading...</h1>;
   }
@@ -24,15 +23,15 @@ const SearchVideos = () => {
 
   return (
     <div className="search-videos">
-      {data.items.map((val, index) => {
+      {data?.contents.map((res, index) => {
         return (
           <SearchVideoslist
             key={index}
-            title={val.snippet.title}
-            thumbnails={val.snippet.thumbnails.medium.url}
-            channel={val.snippet.channelTitle}
-            channelLogo={<RxAvatar />}
-            channelID={val.id.videoId}
+            title={res.video?.title}
+            thumbnails={res.video?.thumbnails[1]?.url}
+            channel={res.video.author.title}
+            channelLogo={res.video?.author.avatar[0]?.url}
+            channelID={res.video.videoId}
           />
         );
       })}
