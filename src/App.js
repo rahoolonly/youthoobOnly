@@ -5,8 +5,8 @@ import Home from "./components/Home/Home";
 import Sidebar from "./components/Sidebar/Sidebar";
 import "./index.css";
 import { useState } from "react";
-import SearchVideos from "./components/Search/SearchVideos";
-import ParticularVideo from "./components/Particular Video/ParticularVideo";
+import SearchVideos from "./components/search/SearchVideos";
+import ParticularVideo from "./components/ParticularVideo/ParticularVideo";
 
 const App = () => {
   const [changeslider, setChangeslider] = useState(false);
