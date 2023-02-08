@@ -1,5 +1,5 @@
 import React from "react";
-import Card from "../Car/Card";
+import Card from "../Card/Card";
 import "./Home.css";
 import { useGetSuggestedVideosQuery } from "../Services/apiSlice";
 
