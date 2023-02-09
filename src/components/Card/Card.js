@@ -1,6 +1,5 @@
 import React from "react";
 import { Link } from "react-router-dom";
-import { RxAvatar } from "react-icons/rx";
 import "./card.css";
 
 function Card({
@@ -13,16 +12,6 @@ function Card({
   publishedTime,
   VideoID,
 }) {
-
-  let view = views;
-  if(view>1000000){
-    view = Math.floor(view/1000000) + "M"
-  }else if(view>100000){
-    view = Math.floor(view/1000000) + "K"
-  }else{
-    view = view;
-  }
-
 
   return (
     <>
@@ -40,7 +29,7 @@ function Card({
                 </div>
                 <div className="channel-name">{channelName}</div>
 
-                <div className="views-with-time">{view} {publishedTime}</div>
+                <div className="views-with-time">{views} {publishedTime}</div>
               </div>
             </div>
           </Link>
@@ -61,7 +50,7 @@ function Card({
                 </div>
                 <div className="channel-name">{channelName}</div>
 
-                <div className="views-with-time">{view} {publishedTime}</div>
+                <div className="views-with-time">{views} {publishedTime}</div>
               </div>
             </div>
           </Link>

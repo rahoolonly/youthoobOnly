@@ -10,7 +10,7 @@ export const youthoobApi = createApi({
     getSuggestedVideos: builder.query({
       query: () => ({
         url: "search/",
-        params: { q: "Punjabi Song", hl: "en", gl: "US" },
+        params: { q: "lakshay chaudhary", hl: "en", gl: "US" },
         headers: {
           'X-RapidAPI-Key': 'a98bae7eb7msh6022174c762d388p16711bjsn1b1bfa6be4f9',
           'X-RapidAPI-Host': 'youtube138.p.rapidapi.com'
