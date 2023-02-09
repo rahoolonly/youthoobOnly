@@ -99,3 +99,39 @@ html {
 .icon {
   font-size: x-large;
 }
+
+@media screen and (max-width:880px){
+  .navbar_logo > .icon {
+    display: none;
+   }
+}
+
+@media screen and (max-width:586px) {
+
+  .navbar_logo{
+    width: 15%;
+  }
+  .navbar_logo > .icon {
+   display: none;
+  }
+
+  .navbar_search{
+    width: 75%;
+  }
+  .icons{display: none;}
+  
+  
+}
+
+/* @media screen and (max-width:400px) {
+  .navbar{
+    width: 100%;
+  }
+  .navbar_search{
+display: none;  }
+
+  .icons{
+    display: none;
+  }
+  
+} */
