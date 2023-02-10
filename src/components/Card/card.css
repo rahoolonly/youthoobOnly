@@ -2,6 +2,14 @@ html {
   font-size: 62.5%;
 }
 
+.cardVideoChannel{
+  /* justify-content: center; */
+  display: flex;
+  align-items: center;
+  flex-direction: column;
+}
+
+
 .card > a {
   text-decoration: none;
   color: #000;
@@ -52,7 +60,9 @@ html {
   font-size: small;
 }
 
-@media screen and (max-width: 886px) {
+@media screen and (max-width: 586px) {
+
+
   .VideoLogo {
     width: 20%;
   }
@@ -60,6 +70,5 @@ html {
   .logo-with-text{
     padding: 1rem 1rem;
   }
-
   
 }

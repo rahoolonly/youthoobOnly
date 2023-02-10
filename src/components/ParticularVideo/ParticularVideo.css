@@ -161,32 +161,15 @@ hr{
     height: 35vh;
   }
 
-  /* .particular-video-title {
-    padding-left: 1.4rem;
-  }
-
-  .particular-video-logo-with-text {
-    padding-left: 1.4rem;
-  }
-
-  hr {
-    display: flex;
-    background-color: rgb(252, 247, 247);
-  }
-
-  .particular-video-logo {
-    width: 60%;
-    display: flex;
-    align-items: center;
-    gap: 1rem;
-  }
-
-  .desc-with-views {
-    display: none;
-  } */
 
   .particular-video-logo {
     width: 60%;
   }
 
+}
+
+@media screen and (max-width:400px) {
+  iframe {
+    height: 30vh;
+  }
 }

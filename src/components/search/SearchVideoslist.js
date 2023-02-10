@@ -26,7 +26,7 @@ const SearchVideoslist = ({
               <img src={particularChannelThumbnail} alt="" />
             </div>
          <div className="particularChannelText">
-         <div className="video-title">{particularChannelName}</div>
+         <div className="particularChannelTitle video-title">{particularChannelName}</div>
             <div className="particularChannelSubs views-with-time">{ particularChannelUrl} {particularChannelSubscriber}</div>
             <div className="particularChannelDesc">{particularChannelDescri}</div>
          </div>
@@ -39,7 +39,7 @@ const SearchVideoslist = ({
 
             <div>
               <div className="video-title">{title}</div>
-              <div className="views-with-time">
+              <div className="searchVideoViews-with-time">
                 {views} {publishedTime}
               </div>
               <div className="channelName-with-desc">

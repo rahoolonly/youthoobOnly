@@ -17,6 +17,7 @@ function Card({
   publishedTime,
   VideoID,
 }) {
+  console.log(particularChannelName);
   return (
     <>
       {/* {particularChannelSubscriber && (
@@ -28,7 +29,16 @@ function Card({
       )} */}
 
       {particularChannelName && particularChannelSubscriber ? (
-        <div></div>
+        <div>
+          <div className="particularChannelLogo">
+            <img src={particularChannelThumbnail} alt="" />
+          </div>
+          <div className="cardVideoChannel particularChannelText">
+         <div className="video-title">{particularChannelName}</div>
+            <div className="particularChannelSubs views-with-time">{ particularChannelUrl} {particularChannelSubscriber}</div>
+
+         </div>
+        </div>
       ) : (
         <div>
           {changeslider && (
