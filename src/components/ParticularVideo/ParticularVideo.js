@@ -32,22 +32,22 @@ const ParticularVideo = () => {
 
         <div className="particular-video-text">
           <div className=" particular-video-title"> {data?.title}</div>
-         <div className="mobilePointViews">
-         <div>
-                {data.stats.views > 1000000
-                  ? (data.stats.views / 1000000).toFixed(1) + "M views"
-                  : data.stats.views > 100000
-                  ? Math.floor(data.stats.views / 1000) + "k views"
-                  : data.stats.views > 10000
-                  ? (data.stats.views / 1000).toFixed(1) + "k views"
-                  : data.stats.views > 1000
-                  ? (data.stats.views / 1000).toFixed(1) + "k views"
-                  : data.stats.views == null
-                  ? data.stats.viewers + " views"
-                  : data.stats.views + " views"}{" "}
-              </div>
-              {data?.publishedDate}
-         </div>
+          <div className="mobilePointViews">
+            <div>
+              {data.stats.views > 1000000
+                ? (data.stats.views / 1000000).toFixed(1) + "M views"
+                : data.stats.views > 100000
+                ? Math.floor(data.stats.views / 1000) + "k views"
+                : data.stats.views > 10000
+                ? (data.stats.views / 1000).toFixed(1) + "k views"
+                : data.stats.views > 1000
+                ? (data.stats.views / 1000).toFixed(1) + "k views"
+                : data.stats.views == null
+                ? data.stats.viewers + " views"
+                : data.stats.views + " views"}{" "}
+            </div>
+            {data?.publishedDate}
+          </div>
           <div className="particular-video-logo-with-text">
             <div className="particular-video-logo">
               <img src={data?.author?.avatar[1].url} alt="" />
@@ -62,7 +62,7 @@ const ParticularVideo = () => {
               </div>
             </div>
           </div>
-              <hr />
+          <hr />
 
           <div className="desc-with-views">
             <div className="particularVideo-views">

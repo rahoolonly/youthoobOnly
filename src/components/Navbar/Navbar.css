@@ -3,7 +3,7 @@ html {
 }
 
 .navbar {
-  padding: .5rem 2rem;
+  padding: 0.5rem 2rem;
   display: flex;
   justify-content: space-between;
   position: sticky;
@@ -21,13 +21,12 @@ html {
 .navbar_logo > .icon {
   font-size: x-large;
   flex: 1;
-  padding: .7rem;
+  padding: 0.7rem;
 }
 
-.navbar_logo>.icon:hover{
+.navbar_logo > .icon:hover {
   background-color: #f2f2f2;
   border-radius: 5rem;
-
 }
 
 .navbar_logo > a > img {
@@ -38,6 +37,10 @@ html {
   display: flex;
   align-items: center;
   width: 30%;
+}
+
+.mobileNavSearchIcon{
+  display: none;
 }
 
 .open_iconWithInput {
@@ -81,12 +84,14 @@ html {
 .navbar_search > button {
   display: flex;
   align-items: center;
-  padding: 0.8rem 1rem;
+  padding: 0.78rem 1rem;
   font-size: large;
   cursor: pointer;
   border: 0.5px solid black;
   border-top-right-radius: 2rem;
   border-bottom-right-radius: 2rem;
+  background-color: transparent;
+
 }
 
 .icons {
@@ -100,27 +105,92 @@ html {
   font-size: x-large;
 }
 
-@media screen and (max-width:880px){
+@media screen and (max-width: 880px) {
   .navbar_logo > .icon {
     display: none;
-   }
+  }
 }
 
-@media screen and (max-width:586px) {
+@media screen and (max-width: 586px) {
+ 
+  .navbar{
+    display: flex;
+    align-items: center;
 
-  .navbar_logo{
+  }
+
+  .navbarExtendMobile{
+        padding: 2rem;
+  }
+
+  .navbar_logo {
     width: 15%;
   }
   .navbar_logo > .icon {
-   display: none;
+    display: none;
   }
 
-  .navbar_search{
-    width: 75%;
+  .navbar_search {
+    /* width: 75%; */
+    display: none;
   }
-  .icons{display: none;}
+
+  .mobileNavSearchIcon{
+    display: flex;
+    padding-right: 3rem;
+  }
+
+
+.mobileNavSearchIcon>button{
+  background-color: transparent;
+  border: none;
+  display: flex;
+  align-items: center;
+  width: 100%;
+  font-size: x-large;
+}
+
   
-  
+
+.searchIconsforMobile{
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  width: 200vw;
+}
+
+.mobileBackArrow{
+  font-size: large;
+  cursor: pointer;
+  /* margin-right: 1.5rem; */
+}
+
+  .mobileNavSearch{
+    align-items: center;
+    display: flex;
+    border: 1px solid black;
+    border-radius: .4rem;
+    justify-content: center;
+  }
+
+  .mobileNavSearch>input{
+   outline: none;
+   width: 70vw;
+   border: none;
+   padding: .8rem .5rem;
+  }
+
+  .mobileNavSearch>button{
+    border:none;
+    font-size: large;
+    cursor: pointer;
+    align-items: center;
+    display: flex;
+    background-color: transparent;
+  }
+  .icons {
+    display: none;
+  }
 }
 
 /* @media screen and (max-width:400px) {

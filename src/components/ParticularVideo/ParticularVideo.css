@@ -153,6 +153,9 @@ hr{
     gap: 1.4rem;
   } */
 
+  .particularVideoSubs{
+    font-size: 1.2rem;
+  }
 
   iframe {
     height: 35vh;

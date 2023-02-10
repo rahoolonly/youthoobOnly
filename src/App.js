@@ -7,6 +7,7 @@ import "./index.css";
 import { useState } from "react";
 import SearchVideos from "./components/search/SearchVideos";
 import ParticularVideo from "./components/ParticularVideo/ParticularVideo";
+import './App.css'
 
 const App = () => {
   const [changeslider, setChangeslider] = useState(false);

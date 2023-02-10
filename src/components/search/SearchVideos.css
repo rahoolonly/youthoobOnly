@@ -9,7 +9,6 @@ display: flex;
 .particularChannelLogo{
   justify-content: center;
   display: flex;
-  
 }
 
 .particularChannelLogo >img{
@@ -43,7 +42,6 @@ display: flex;
 
 .thumbnail {
   width: 25%;
-  /* height: 200px; */
   height: auto;
   border-radius: 1rem;
 }
@@ -86,5 +84,38 @@ display: flex;
 
 .desc{
   font-size: small;
+}
+
+
+@media screen and (max-width:886px) {
+ 
+  .thumbnail-with-text {
+    display: flex;
+    flex-direction: column;
+  }
+
+  .thumbnail{
+    width: 100%;
+  }
+
+  .video-title{
+    padding: 0 1.4rem;
+  }
+
+ .views-with-time{
+   margin-top: .4rem;
+   padding: 0 1.4rem;
+ }
+
+ .channelName{
+   font-size: 1.8rem;
+   padding:  0 1.4rem;
+   margin-top: .7rem !important;
+ }
+
+ .desc{
+   display: none;
+ }
+
 }
 
