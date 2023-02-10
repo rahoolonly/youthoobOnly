@@ -3,7 +3,7 @@ html {
 }
 
 .particular-video {
-  width: 55%;
+  width: 60%;
   text-decoration: none;
   display: flex;
   gap: 1rem;
@@ -11,10 +11,24 @@ html {
   color: #0f0f0f;
 }
 
+.video {
+  width: 100%;
+  /* height: 100vh; */
+}
+
+iframe {
+  width: 100%;
+  height: 70vh;
+}
+
 .particular-video-title {
   font-size: 2rem;
   color: #0f0f0f;
   font-weight: 500;
+}
+
+.mobilePointViews{
+  display: none;
 }
 
 .particular-video-logo-with-text {
@@ -24,18 +38,32 @@ html {
   align-items: center;
 }
 
+hr{
+  display: none;
+}
+
 .particular-video-logo {
-  font-size: xx-large;
+  width: 35%;
   display: flex;
   align-items: center;
+  gap: 1rem;
+}
+
+.particular-video-logo > img {
+  border-radius: 6rem;
+  width: 15%;
 }
 
 .particular-video-channelName {
   display: flex;
   align-items: center;
-  font-size: 1.4rem;
-  font-weight: 660;
+  font-size: 1.6rem;
+  font-weight: 600;
   color: #262a2d;
+}
+
+.particularVideoSubs {
+  font-size: small;
 }
 
 .desc-with-views {
@@ -43,15 +71,119 @@ html {
   background-color: #e5e5e5;
   gap: 0.5rem;
   display: flex;
+  font-weight: 450;
+  font-size: 1.4rem;
   flex-direction: column;
   border: 1px solid #e5e5e5;
   border-radius: 1rem;
 }
 
 .particularVideo-views {
-  font-size: small;
+  font-size: 1.4rem;
   font-weight: 750;
   color: #262a2d;
   display: flex;
   gap: 1rem;
+}
+
+@media screen and (max-width:1017px) {
+  .particular-video{
+    width: 100%;
+  }
+
+  iframe{
+    height: 48vh;
+  }
+
+  
+  .particular-video-title {
+    padding-left: 1.4rem;
+  }
+  
+  .mobilePointViews{
+    margin-top: .5rem;
+    display: flex;
+    padding-left: 1.4rem;
+    font-size: 1.2rem;
+    gap: 1.4rem;
+  }
+  
+  .particular-video-logo-with-text {
+    padding-left: 1.4rem;
+  }
+  
+  hr {
+    display: flex;
+    background-color: rgb(252, 247, 247);
+  }
+  
+  .particular-video-logo {
+    width: 40%;
+    display: flex;
+    align-items: center;
+    gap: 1rem;
+  }
+  
+  .desc-with-views {
+    display: none;
+  }
+}
+
+
+@media screen and (max-width:880px) {
+  
+  iframe{
+    height: 42vh;
+  }
+  
+}
+
+
+
+@media screen and (max-width: 586px) {
+  /* .particular-video {
+    width: 100%;
+  }
+  
+  .mobilePointViews{
+    margin-top: .5rem;
+    display: flex;
+    padding-left: 1.4rem;
+    font-size: 1.2rem;
+    gap: 1.4rem;
+  } */
+
+
+  iframe {
+    height: 35vh;
+  }
+
+  /* .particular-video-title {
+    padding-left: 1.4rem;
+  }
+
+  .particular-video-logo-with-text {
+    padding-left: 1.4rem;
+  }
+
+  hr {
+    display: flex;
+    background-color: rgb(252, 247, 247);
+  }
+
+  .particular-video-logo {
+    width: 60%;
+    display: flex;
+    align-items: center;
+    gap: 1rem;
+  }
+
+  .desc-with-views {
+    display: none;
+  } */
+
+  .particular-video-logo {
+    width: 60%;
+  }
+
 }

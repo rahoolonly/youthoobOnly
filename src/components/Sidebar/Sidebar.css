@@ -16,6 +16,15 @@
   align-items: center;
 }
 
+
+@media screen and (max-width:1017px) {
+
+  .second_row{
+    display: none;
+  }
+}
+
+
 @media screen and (max-width:880px){
   .second_row{
     display: none;
