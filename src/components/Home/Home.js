@@ -5,7 +5,7 @@ import { useGetSuggestedVideosQuery } from "../Services/apiSlice";
 
 function Home({ changeslider }) {
   const { data, isError, isLoading } = useGetSuggestedVideosQuery();
-  console.log(data?.contents);
+  // console.log(data?.contents);
   if (isLoading) {
     return <p>Loading</p>;
   }
@@ -18,10 +18,16 @@ function Home({ changeslider }) {
       {changeslider && (
         <div className="home">
           {data?.contents?.map((res, index) => {
+            console.log(res);
             return (
               <Card
                 key={index}
-                thumbnails={res.video?.thumbnails[1]?.url==null?res.video?.thumbnails[0]?.url:res.video?.thumbnails[1]?.url}
+                // particularChannelName = {res?.channel?.title}
+                // particularChannelThumbnail = {res?.channel?.avatar[0]?.url}
+                // particularChannelSubscriber = {res?.channel?.stats?.subscribersText}
+                // particularChannelUrl = {res?.channel?.canonicalBaseUrl}
+                // particularChannelDescri = {res?.channel?.descriptionSnippet}
+                // thumbnails={res.video?.thumbnails[1]?.url==null?res.video?.thumbnails[0]?.url:res.video?.thumbnails[1]?.url}
                 videoLogo = {res.video?.author.avatar[0].url}
                 title={res.video?.title}
                 channelName={res.video?.author.title}

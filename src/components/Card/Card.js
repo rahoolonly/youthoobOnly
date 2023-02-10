@@ -4,6 +4,11 @@ import "./card.css";
 
 function Card({
   changeslider,
+  particularChannelName,
+  particularChannelThumbnail,
+  particularChannelSubscriber,
+  particularChannelUrl,
+  particularChannelDescri,
   thumbnails,
   videoLogo,
   title,
@@ -12,48 +17,61 @@ function Card({
   publishedTime,
   VideoID,
 }) {
-
   return (
     <>
-      {changeslider && (
-        <div className="card">
-          <Link to={`video/${VideoID}`}>
-            <img className="card-thumbnail" src={thumbnails} alt="" />
-            <div className="logo-with-text">
-              <div className="VideoLogo">
-            <img src={videoLogo} alt="" />
-              </div>
-              <div className="text">
-                <div className="main-title">
-                  {title}
-                </div>
-                <div className="channel-name">{channelName}</div>
+      {/* {particularChannelSubscriber && (
+        <div>
+          <img src={particularChannelThumbnail} alt="" />
 
-                <div className="views-with-time">{views} {publishedTime}</div>
-              </div>
-            </div>
-          </Link>
+          <h1>{particularChannelName}</h1>
         </div>
-      )}
+      )} */}
 
-      {!changeslider && (
-        <div className="card">
-          <Link to={`video/${VideoID}`}>
-            <img className="card-thumbnail" src={thumbnails} alt="" />
-            <div className="logo-with-text">
-              <div className="VideoLogo">
-              <img src={videoLogo} alt="" />
-              </div>
-              <div className="text">
-                <div className="main-title">
-                  {title}
+      {particularChannelName && particularChannelSubscriber ? (
+        <div></div>
+      ) : (
+        <div>
+          {changeslider && (
+            <div className="card">
+              <Link to={`video/${VideoID}`}>
+                <img className="card-thumbnail" src={thumbnails} alt="" />
+                <div className="logo-with-text">
+                  <div className="VideoLogo">
+                    <img src={videoLogo} alt="" />
+                  </div>
+                  <div className="text">
+                    <div className="main-title">{title}</div>
+                    <div className="channel-name">{channelName}</div>
+
+                    <div className="views-with-time">
+                      {views} {publishedTime}
+                    </div>
+                  </div>
                 </div>
-                <div className="channel-name">{channelName}</div>
-
-                <div className="views-with-time">{views} {publishedTime}</div>
-              </div>
+              </Link>
             </div>
-          </Link>
+          )}
+
+          {!changeslider && (
+            <div className="card">
+              <Link to={`video/${VideoID}`}>
+                <img className="card-thumbnail" src={thumbnails} alt="" />
+                <div className="logo-with-text">
+                  <div className="VideoLogo">
+                    <img src={videoLogo} alt="" />
+                  </div>
+                  <div className="text">
+                    <div className="main-title">{title}</div>
+                    <div className="channel-name">{channelName}</div>
+
+                    <div className="views-with-time">
+                      {views} {publishedTime}
+                    </div>
+                  </div>
+                </div>
+              </Link>
+            </div>
+          )}
         </div>
       )}
     </>

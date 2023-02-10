@@ -2,28 +2,60 @@ import React from "react";
 import { Link } from "react-router-dom";
 import "./SearchVideos.css";
 
-
-const SearchVideoslist = ({ channelLogo, title, thumbnails, channel ,channelID}) => {
+const SearchVideoslist = ({
+  particularChannelName,
+  particularChannelThumbnail,
+  particularChannelSubscriber,
+  particularChannelUrl,
+  particularChannelDescri,
+  thumbnails,
+  title,
+  views,
+  publishedTime,
+  description,
+  channelLogo,
+  channelName,
+  channelID,
+}) => {
   return (
-    <div> 
-      <Link to={`video/${channelID}`} className="videoList">   
-        <div className="thumbnail-with-text">
-          <img className="thumbnail" src={thumbnails} alt="" />
-
-          <div>
-            <div className="video-title">{title}</div>
-            <div className="views-with-time">20M 3 months ago</div>
-            <div className="channelName-with-desc">
-              <div className="channelName">
-                <div className="channelLogo"><img src={channelLogo} alt="" /></div>
-                {channel}
-              </div>
-              <div className="desc">its a best youtube channel</div>
+    <>
+      {particularChannelName ? (
+        <div>
+          <div className="particularChannelDetails">
+            <div className="thumbnail particularChannelLogo">
+              <img src={particularChannelThumbnail} alt="" />
             </div>
+         <div className="particularChannelText">
+         <div className="video-title">{particularChannelName}</div>
+            <div className="particularChannelSubs views-with-time">{ particularChannelUrl} {particularChannelSubscriber}</div>
+            <div className="particularChannelDesc">{particularChannelDescri}</div>
+         </div>
           </div>
         </div>
-      </Link>
-    </div>
+      ) : (
+        <Link to={`video/${channelID}`} className="videoList">
+          <div className="thumbnail-with-text">
+            <img className="thumbnail" src={thumbnails} alt="" />
+
+            <div>
+              <div className="video-title">{title}</div>
+              <div className="views-with-time">
+                {views} {publishedTime}
+              </div>
+              <div className="channelName-with-desc">
+                <div className="channelName">
+                  <div className="channelLogo">
+                    <img src={channelLogo} alt="" />
+                  </div>
+                  {channelName}
+                </div>
+                <div className="desc">{description}</div>
+              </div>
+            </div>
+          </div>
+        </Link>
+      )}
+    </>
   );
 };
 
