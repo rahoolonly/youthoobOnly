@@ -78,7 +78,6 @@ html {
 
 .search-videos {
   display: grid;
-  /* grid-template-columns: repeat(1, minmax(1200px, 1fr)); */
   gap: 2rem;
 }
 
@@ -91,37 +90,63 @@ html {
   font-size: small;
 }
 
-/* @media screen and (min-width:881px) and (max-width:990px) {
-  .channelLogo{
-    width: 7% !important;
+@media screen and (min-width: 981px) and (max-width: 1017px) {
+  .search-videos {
+    grid-template-columns: repeat(3, minmax(200px, 1fr));
+    row-gap: 2rem;
+    column-gap: 1rem;
+    padding: 0.4rem 1rem;
   }
-} */
 
-@media screen and (min-width:586px) and (max-width: 980px) {
+  .thumbnail-with-text {
+    flex-direction: column;
+  }
+
+  .thumbnail {
+    width: 100%;
+    height: auto;
+  }
+}
+
+@media screen and (min-width: 586px) and (max-width: 980px) {
+  .search-videos {
+    display: grid;
+    row-gap: 2rem;
+    column-gap: 1rem;
+    padding: 0.4rem 1rem;
+    grid-template-columns: repeat(2, minmax(200px, 1fr));
+  }
+
+  .thumbnail-with-text {
+    flex-direction: column;
+  }
+
+  .thumbnail {
+    width: 100%;
+    height: auto;
+  }
+
   .video-title {
     font-size: 1.7rem;
   }
 
   .videoList {
     display: flex;
-    flex-direction: column !important;
   }
 
   .particularChannelLogo > img {
     width: 25%;
-    
+
     margin-bottom: 1rem;
     border-radius: 13rem;
   }
 
-.channelLogo{
-  width: 7% !important;
+  .channelLogo {
+    width: 7% !important;
+  }
 }
 
-
-}
-
-@media screen and (max-width: 980px) {
+@media screen and (max-width: 585px) {
   .particularChannelDetails {
     display: flex;
     flex-direction: column;
