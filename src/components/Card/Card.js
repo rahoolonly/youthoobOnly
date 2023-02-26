@@ -17,7 +17,6 @@ function Card({
   publishedTime,
   VideoID,
 }) {
-  console.log(particularChannelName);
   return (
     <>
       {/* {particularChannelSubscriber && (

@@ -5,7 +5,7 @@ import { useGetSuggestedVideosQuery } from "../Services/apiSlice";
 
 function Home({ changeslider }) {
   const { data, isError, isLoading } = useGetSuggestedVideosQuery();
-  // console.log(data?.contents);
+  console.log(data?.contents);
   if (isLoading) {
     return <p>Loading</p>;
   }
@@ -18,7 +18,7 @@ function Home({ changeslider }) {
       {changeslider && (
         <div className="home">
           {data?.contents?.map((res, index) => {
-            console.log(res);
+      
             return (
               <Card
                 key={index}

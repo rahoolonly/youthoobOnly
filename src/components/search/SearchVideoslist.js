@@ -17,7 +17,7 @@ const SearchVideoslist = ({
   channelName,
   channelID,
 }) => {
-  return (
+  return ( 
     <>
       {particularChannelName ? (
         <div>
@@ -33,7 +33,7 @@ const SearchVideoslist = ({
           </div>
         </div>
       ) : (
-        <Link to={`video/${channelID}`} className="videoList">
+        <Link to={`/video/${channelID}`} className="videoList">
           <div className="thumbnail-with-text">
             <img className="thumbnail" src={thumbnails} alt="" />
 

@@ -1,0 +1,11 @@
+.relatedVideos{
+    padding-right: 10rem;
+    padding-top: 1rem;
+    /* margin-bottom: 1rem !important; */
+}
+
+@media screen and (max-width:990px) {
+    .relatedVideos{
+        padding: 0 1.5rem;
+    }
+}

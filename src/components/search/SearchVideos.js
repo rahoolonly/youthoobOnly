@@ -8,11 +8,13 @@ const SearchVideos = () => {
   const { keyword } = useParams();
   // const keyword = window.location.pathname.split("/search/");
 
+  console.log(keyword);
+
   // if (keyword === "%20") {
   //   keyword = keyword.split("%20");
   // }
   const { data, isError, isLoading } = useGetVideosBySearchQuery(keyword);
-  // console.log(data?.contents);
+ 
   if (isLoading) {
     return <h1>Loading...</h1>;
   }

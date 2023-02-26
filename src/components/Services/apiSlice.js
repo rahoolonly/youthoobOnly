@@ -10,9 +10,9 @@ export const youthoobApi = createApi({
     getSuggestedVideos: builder.query({
       query: () => ({
         url: "search/",
-        params: { q: "lakshay chaudhary", hl: "en", gl: "US" },
+        params: { q: "sidhu moose wala"},
         headers: {
-          'X-RapidAPI-Key': 'a98bae7eb7msh6022174c762d388p16711bjsn1b1bfa6be4f9',
+          'X-RapidAPI-Key': '09d1d5114dmshdfaf0502591926cp115370jsneca12e1bd387',
           'X-RapidAPI-Host': 'youtube138.p.rapidapi.com'
         },
       }),
@@ -21,9 +21,9 @@ export const youthoobApi = createApi({
     getVideosBySearch: builder.query({
       query: (keyword) => ({
         url: 'search/',
-        params: { q: `${keyword}`, hl: "en", gl: "US" },
+        params: { q: `${keyword}`},
         headers: {
-          'X-RapidAPI-Key': 'a98bae7eb7msh6022174c762d388p16711bjsn1b1bfa6be4f9',
+          'X-RapidAPI-Key': '09d1d5114dmshdfaf0502591926cp115370jsneca12e1bd387',
           'X-RapidAPI-Host': 'youtube138.p.rapidapi.com'
         },
       }),
@@ -33,13 +33,24 @@ export const youthoobApi = createApi({
       query: (id) => ({
         method: "GET",
         url: 'video/details/',
-        params: {id: `${id}`, hl: 'en', gl: 'US'},
+        params: {id: `${id}`,},
         headers: {
-          'X-RapidAPI-Key': 'a98bae7eb7msh6022174c762d388p16711bjsn1b1bfa6be4f9',
+          'X-RapidAPI-Key': '09d1d5114dmshdfaf0502591926cp115370jsneca12e1bd387',
           'X-RapidAPI-Host': 'youtube138.p.rapidapi.com'
         },
       }),
     }),
+
+    getRelatedVideo : builder.query({
+      query:(keyword)=>({
+        url: 'video/related-contents/',
+        params: {id: `${keyword}`,},
+        headers: {
+          'X-RapidAPI-Key': '09d1d5114dmshdfaf0502591926cp115370jsneca12e1bd387',
+          'X-RapidAPI-Host': 'youtube138.p.rapidapi.com'
+        }
+      })
+    })
   }),
 });
 
@@ -47,5 +58,5 @@ export const {
   useGetSuggestedVideosQuery,
   useGetVideosBySearchQuery,
   useGetParticularVideoDetailsQuery,
-  usePlayParticularVideoQuery,
+  useGetRelatedVideoQuery
 } = youthoobApi;

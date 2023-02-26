@@ -1,4 +1,4 @@
-@media screen and (min-width:881px){
+@media screen and (min-width:991px) {
   .home {
     float: right;
     flex: 0.8;
@@ -6,7 +6,7 @@
     padding-left: 5rem;
     padding-right: .5rem;
     display: grid;
-    grid-template-columns: repeat(4, minmax(300px, 1fr)) ;
+    grid-template-columns: repeat(4, minmax(230px, 1fr)) ;
     /* height: 599px; */
     row-gap:3rem;
     column-gap: 1.5rem;
@@ -15,7 +15,31 @@
   .homeScreenChange {
     padding: 1rem 3rem;
     display: grid;
-    grid-template-columns: repeat(4, minmax(300px, 1fr)) ;
+    grid-template-columns: repeat(4, minmax(230px, 1fr)) ;
+    row-gap: 5rem;
+    column-gap: 1.5rem;
+  }
+  
+}
+
+@media screen and  (min-width:881px) and (max-width:990px){
+  .home {
+    float: right;
+    flex: 0.8;
+    padding: 1rem 0;
+    padding-left: 5rem;
+    padding-right: .5rem;
+    display: grid;
+    grid-template-columns: repeat(3, minmax(200px, 1fr)) ;
+    /* height: 599px; */
+    row-gap:3rem;
+    column-gap: 1.5rem;
+  }
+  
+  .homeScreenChange {
+    padding: 1rem 3rem;
+    display: grid;
+    grid-template-columns: repeat(3, minmax(200px, 1fr)) ;
     row-gap: 5rem;
     column-gap: 1.5rem;
   }

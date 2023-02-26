@@ -1,0 +1,13 @@
+a{
+    text-decoration: none;
+    color: black;
+}
+.reatedVideoList{
+    display: flex;
+    gap: 1rem;
+    margin-bottom: 1rem;
+}
+
+.realtedVideoImg>img{
+    border-radius: 1rem;
+}

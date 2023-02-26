@@ -6,25 +6,12 @@ import { MdSearch, MdCameraAlt, MdNotificationsNone } from "react-icons/md";
 import { AiOutlineArrowLeft } from "react-icons/ai";
 import logo from "../images/Minimalist_Initial_Letter_Logo-removebg-preview (1).png";
 import "./Navbar.css";
-import { useGetVideosBySearchQuery } from "../Services/apiSlice";
 
 function Navbar({ changeslider, setChangeslider }) {
-  const [show, setShow] = useState(true);
   const [keyword, setKeyword] = useState("");
   const navigate = useNavigate();
   const [mobileNavbar, setMobileNavbar] = useState(false);
-  const visibleIcon = () => {
-    if (show) {
-      setShow(false);
-    }
-  };
-
-  const disableIcon = () => {
-    if (!show) {
-      setShow(true);
-    }
-    // alert("you clicked navbar");
-  };
+ 
 
   const changeSliding = () => {
     if (changeslider) {
@@ -38,24 +25,30 @@ function Navbar({ changeslider, setChangeslider }) {
     setMobileNavbar(true);
   };
 
-  const closeSearchForMobile = ()=>{
+  const closeSearchForMobile = () => {
     setMobileNavbar(false);
-  }
+  };
 
-  useGetVideosBySearchQuery();
+  const handleKeyDown = (event) => {
+    if (event.key === "Enter") {
+      navigate(`/search/${keyword}`);
+    }
+  };
 
   return (
-    <nav onClick={disableIcon} className={`navbar ${mobileNavbar && 'navbarExtendMobile'}`}>
-     {!mobileNavbar &&  <div className="navbar_logo">
-        <div onClick={changeSliding} className="icon">
-          {" "}
-          <RxHamburgerMenu />
+    <nav className={`navbar ${mobileNavbar && "navbarExtendMobile"}`}>
+      {!mobileNavbar && (
+        <div className="navbar_logo">
+          <div onClick={changeSliding} className="icon">
+            {" "}
+            <RxHamburgerMenu />
+          </div>
+          <Link to={"/"}>
+            {" "}
+            <img src={logo} alt="" />
+          </Link>
         </div>
-        <Link to={"/"}>
-          {" "}
-          <img src={logo} alt="" />
-        </Link>
-      </div>}
+      )}
 
       {!mobileNavbar && (
         <div onClick={openSearchForMobile} className="mobileNavSearchIcon">
@@ -73,13 +66,18 @@ function Navbar({ changeslider, setChangeslider }) {
           </div>
 
           <div className="mobileNavSearch">
-            <input type="text" value={keyword}
-            onChange={(e) => {
-              setKeyword(e.target.value);
-            }}  />
-            <button onClick={() => {
-            navigate(`/search/${keyword}`);
-          }}>
+            <input
+              type="text"
+              value={keyword}
+              onChange={(e) => {
+                setKeyword(e.target.value);
+              }}
+            />
+            <button
+              onClick={() => {
+                navigate(`/search/${keyword}`);
+              }}
+            >
               {" "}
               <MdSearch />
             </button>
@@ -88,7 +86,27 @@ function Navbar({ changeslider, setChangeslider }) {
       )}
 
       <div className="navbar_search">
-        <div className={`icon_with_input ${show && "open_iconWithInput"}`}>
+        <div className="largeDeviceNavSearch">
+          <input
+            type="text"
+            value={keyword}
+            onKeyDown={handleKeyDown}
+            placeholder="Search Here"
+            onChange={(e) => {
+              setKeyword(e.target.value);
+            }}
+          />
+          <button
+            onClick={(e) => {
+              navigate(`/search/${keyword}`);
+            }}
+          >
+            {" "}
+            <MdSearch />
+          </button>
+        </div>
+
+        {/* <div className={`icon_with_input ${show && "open_iconWithInput"}`}>
           {" "}
           {show ? (
             <div className="closeIcon">
@@ -115,7 +133,7 @@ function Navbar({ changeslider, setChangeslider }) {
           }}
         >
           <MdSearch />
-        </button>
+        </button> */}
       </div>
 
       <div className="icons">

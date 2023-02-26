@@ -34,17 +34,17 @@ const ParticularVideo = () => {
           <div className=" particular-video-title"> {data?.title}</div>
           <div className="mobilePointViews">
             <div>
-              {data.stats.views > 1000000
-                ? (data.stats.views / 1000000).toFixed(1) + "M views"
-                : data.stats.views > 100000
-                ? Math.floor(data.stats.views / 1000) + "k views"
-                : data.stats.views > 10000
-                ? (data.stats.views / 1000).toFixed(1) + "k views"
-                : data.stats.views > 1000
-                ? (data.stats.views / 1000).toFixed(1) + "k views"
-                : data.stats.views == null
-                ? data.stats.viewers + " views"
-                : data.stats.views + " views"}{" "}
+              {data?.stats?.views > 1000000
+                ? (data?.stats?.views / 1000000).toFixed(1) + "M views"
+                : data?.stats?.views > 100000
+                ? Math.floor(data?.stats?.views / 1000) + "k views"
+                : data?.stats?.views > 10000
+                ? (data?.stats?.views / 1000).toFixed(1) + "k views"
+                : data?.stats?.views > 1000
+                ? (data?.stats?.views / 1000).toFixed(1) + "k views"
+                : data?.stats?.views == null
+                ? data?.stats?.viewers + " views"
+                : data?.stats?.views + " views"}{" "}
             </div>
             {data?.publishedDate}
           </div>
@@ -54,10 +54,10 @@ const ParticularVideo = () => {
               <div className="particularChannelNameWithSubs">
                 <span className="particular-video-channelName">
                   {" "}
-                  {data?.author.title}
+                  {data?.author?.title}
                 </span>
                 <span className="particularVideoSubs">
-                  {data?.author.stats.subscribersText}
+                  {data?.author?.stats?.subscribersText}
                 </span>
               </div>
             </div>
@@ -67,17 +67,17 @@ const ParticularVideo = () => {
           <div className="desc-with-views">
             <div className="particularVideo-views">
               <div>
-                {data.stats.views > 1000000
-                  ? (data.stats.views / 1000000).toFixed(1) + "M views"
-                  : data.stats.views > 100000
-                  ? Math.floor(data.stats.views / 1000) + "k views"
-                  : data.stats.views > 10000
-                  ? (data.stats.views / 1000).toFixed(1) + "k views"
-                  : data.stats.views > 1000
-                  ? (data.stats.views / 1000).toFixed(1) + "k views"
-                  : data.stats.views == null
-                  ? data.stats.viewers + " views"
-                  : data.stats.views + " views"}{" "}
+                {data?.stats?.views > 1000000
+                  ? (data?.stats?.views / 1000000).toFixed(1) + "M views"
+                  : data?.stats?.views > 100000
+                  ? Math.floor(data?.stats?.views / 1000) + "k views"
+                  : data?.stats?.views > 10000
+                  ? (data?.stats?.views / 1000).toFixed(1) + "k views"
+                  : data?.stats?.views > 1000
+                  ? (data?.stats?.views / 1000).toFixed(1) + "k views"
+                  : data?.stats?.views == null
+                  ? data?.stats?.viewers + " views"
+                  : data?.stats?.views + " views"}{" "}
               </div>
               {data?.publishedDate}
             </div>
