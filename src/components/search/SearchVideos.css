@@ -30,7 +30,7 @@ html {
 }
 
 .videoList {
-  width: 95%;
+  /* width: 30% !important; */
   text-decoration: none;
   color: black;
 }
