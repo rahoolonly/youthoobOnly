@@ -6,9 +6,7 @@ import {
   MdOutlineVideoLibrary,
   MdHistory,
   MdOutlineWatchLater,
-  MdOutlineExpandMore,
 } from "react-icons/md";
-import { AiOutlineLike } from "react-icons/ai";
 import SideItems from "../SideItems/SideItems";
 import Siderows from "../SideItems/Siderows";
 import "./Sidebar.css";

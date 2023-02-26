@@ -6,7 +6,7 @@ import Sidebar from "./components/Sidebar/Sidebar";
 import "./index.css";
 import { useState } from "react";
 import SearchVideos from "./components/search/SearchVideos";
-import Particular_Section from "./components/PartcularSection/Particular_Section";
+import ParticularSection from "./components/PartcularSection/ParticularSection";
 import './App.css'
 
 const App = () => {
@@ -20,8 +20,8 @@ const App = () => {
         <Routes>
           <Route path="/" element={<Home changeslider={changeslider} />} />
           <Route path="/search/:keyword" element={<SearchVideos />} />
-          {/* <Route path="/search/:keyword/video/:id" element={<Particular_Section />} /> */}
-          <Route path="/video/:id" element={<Particular_Section />} />
+          {/* <Route path="/search/:keyword/video/:id" element={<ParticularSection />} /> */}
+          <Route path="/video/:id" element={<ParticularSection />} />
         </Routes>
       </div>
     </BrowserRouter>

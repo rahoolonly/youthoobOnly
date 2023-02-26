@@ -1,5 +1,5 @@
 import React from "react";
-import Particular_Video from "../ParticularVideo/ParticularVideo";
+import ParticularVideo from "../ParticularVideo/ParticularVideo";
 import RelatedVideos from "../RelatedVideos/RelatedVideos";
 import "./Particular_Section.css";
 
@@ -7,7 +7,7 @@ const Particular_Section = () => {
   return (
     <div className="particularSection">
     <div className="particularVideoSection">
-    <Particular_Video />
+    <ParticularVideo />
     </div>
       <div className="RelatedVideosSection">
         {" "}
