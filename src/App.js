@@ -6,7 +6,7 @@ import Sidebar from "./components/Sidebar/Sidebar";
 import "./index.css";
 import { useState } from "react";
 import SearchVideos from "./components/search/SearchVideos";
-import ParticularSection from "./components/PartcularSection/ParticularSection";
+import ParticularSection from "./components/PartcularSection/Particular_Section";
 import './App.css'
 
 const App = () => {
