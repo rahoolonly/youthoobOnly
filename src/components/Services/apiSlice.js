@@ -10,9 +10,9 @@ export const youthoobApi = createApi({
     getSuggestedVideos: builder.query({
       query: () => ({
         url: "search/",
-        params: { q: "sidhu moose wala"},
+        params: { q: "New Punjabi Song"},
         headers: {
-          'X-RapidAPI-Key': '09d1d5114dmshdfaf0502591926cp115370jsneca12e1bd387',
+          'X-RapidAPI-Key' :"09d1d5114dmshdfaf0502591926cp115370jsneca12e1bd387",
           'X-RapidAPI-Host': 'youtube138.p.rapidapi.com'
         },
       }),
