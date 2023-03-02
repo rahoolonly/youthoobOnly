@@ -12,7 +12,7 @@ export const youthoobApi = createApi({
         url: "search/",
         params: { q: "New Punjabi Song"},
         headers: {
-          'X-RapidAPI-Key' :"09d1d5114dmshdfaf0502591926cp115370jsneca12e1bd387",
+          'X-RapidAPI-Key' :"33d3f0c581mshba2205c82a8e26dp19d624jsnb7d60f553a88",
           'X-RapidAPI-Host': 'youtube138.p.rapidapi.com'
         },
       }),
@@ -23,7 +23,7 @@ export const youthoobApi = createApi({
         url: 'search/',
         params: { q: `${keyword}`},
         headers: {
-          'X-RapidAPI-Key': '09d1d5114dmshdfaf0502591926cp115370jsneca12e1bd387',
+          'X-RapidAPI-Key': '33d3f0c581mshba2205c82a8e26dp19d624jsnb7d60f553a88',
           'X-RapidAPI-Host': 'youtube138.p.rapidapi.com'
         },
       }),
@@ -35,7 +35,7 @@ export const youthoobApi = createApi({
         url: 'video/details/',
         params: {id: `${id}`,},
         headers: {
-          'X-RapidAPI-Key': '09d1d5114dmshdfaf0502591926cp115370jsneca12e1bd387',
+          'X-RapidAPI-Key': '33d3f0c581mshba2205c82a8e26dp19d624jsnb7d60f553a88',
           'X-RapidAPI-Host': 'youtube138.p.rapidapi.com'
         },
       }),
@@ -46,7 +46,7 @@ export const youthoobApi = createApi({
         url: 'video/related-contents/',
         params: {id: `${keyword}`,},
         headers: {
-          'X-RapidAPI-Key': '09d1d5114dmshdfaf0502591926cp115370jsneca12e1bd387',
+          'X-RapidAPI-Key': '33d3f0c581mshba2205c82a8e26dp19d624jsnb7d60f553a88',
           'X-RapidAPI-Host': 'youtube138.p.rapidapi.com'
         }
       })
