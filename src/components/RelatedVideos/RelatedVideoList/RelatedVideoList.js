@@ -18,7 +18,7 @@ export const RelatedVideoList = ({
         </div>
         <div className="realtedVideoText">
           <div className="particularVideo-views realtedVideoTitle">
-            {relatedVideoTitle.slice(0,55) }...
+            {relatedVideoTitle}...
           </div>
           <div className="particularVideoSubs relatedVideoChannelName">
             {relatedVideoChannelName}

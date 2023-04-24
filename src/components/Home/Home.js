@@ -5,7 +5,7 @@ import { useGetSuggestedVideosQuery } from "../Services/apiSlice";
 
 function Home({ changeslider }) {
   const { data, isError, isLoading } = useGetSuggestedVideosQuery();
-  console.log(data?.contents);
+
   if (isLoading) {
     return <p>Loading</p>;
   }
